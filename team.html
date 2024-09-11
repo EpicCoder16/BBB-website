@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breaking Barriers In Business</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #081c6c; margin: 0;">
+  <div class="banner" style="margin-top: 2%;">
+    <img src="bbblogonowords.png" class="bannerlogo">
+    <a href="/home.html">Home</a>
+    <a href="#link2">About Us</a>
+    <a href="/team.html">Our Team</a>
+    <a href="#link1">Events</a>
+    <a href="#link2">Resources</a>
+    <a href="#link3">Blog</a>
+  </div>
+  <p class="teamtitle">
+    Meet Our Team
+  </p>
+  <div class="gallery" style="margin-top: 2%; margin-bottom: 10%;">
+    <div class="gallery-container">
+      <div class="gallery-slide">
+        <img src="LenaLibbb.png" alt="Image 1" style="margin-right: 2%; margin-left: 0;">
+        <div class="team-info">
+          <h2 style="font-family: sans-serif;"><span style="color: #054a8a;">Founder and Lead Curriculum Developer of Breaking Barriers in Business</span><br><br>Lena Li</h2>
+          <p style="margin-right: 2%; font-size: 14px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; line-height: 1.5;">Meet our founder Lena Li! She is currently a senior from Oak Brook, a western suburb of Chicago and an aspiring entrepreneur. After learning about a controversy in her high school to align her school's curriculum with an under-resourced high school in her district, she recognized that educational disparities were widespread in her county. Desiring to bridge the gap in educational opportunities, she combined her interests in social equity and business, creating Breaking Barriers in Business (BBB) to provide after school business education opportunities to minority and/or low-income middle and high school students in the western Chicago suburbs through discussion-based lessons and mock business events. Currently, BBB hosts meetings to students from Darien, Westmont, Willowbrook, Burr Ridge, Downers Grove, Oak Brook, and Hinsdale.</p>
+        </div>
+      </div>
+      <div class="gallery-slide">
+          <img src="kacyliubbb2.png" alt="Image 1" style="margin-right: 2%; margin-left: 0;">
+          <div class="team-info">
+            <h2 style="font-family: sans-serif;"><span style="color: #054a8a;">Social Media Writer/Head of Hinsdale Chapter</span><br><br>Kacy Liu</h2>
+            <p style="margin-right: 2%; font-size: 14px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; line-height: 1.5;">Kacy is currently a junior in high school and interested in the business and tech field. She looks forward to sharing business related content and expanding her interests in business. Her hobbies consist of dancing, playing badminton, and exploring psychology.</p>
+          </div>
+      </div>
+      <div class="gallery-slide">
+          <img src="NehaNallamalabbb.png" alt="Image 1" style="margin-right: 2%; margin-left: 0;">
+            <div class="team-info">
+              <h2 style="font-family: sans-serif;"><span style="color: #054a8a;">Communications Director and Social Media Writer/Head of Downers Grove Chapter</span><br><br>Neha Nallamala</h2>
+              <p style="margin-right: 2%; font-size: 14px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; line-height: 1.5;">Neha is currently a junior in high school. She hopes to address various stereotypes and provide accurate information of the business field to the public. In her free time, she likes to play badminton and debate.</p>
+            </div>
+      </div>
+      <div class="gallery-slide">
+          <img src="ShubhraMoudgilbbb.png" alt="Image 1" style="margin-right: 2%; margin-left: 0;">
+          <div class="team-info">
+            <h2 style="font-family: sans-serif;"><span style="color: #054a8a;">Co-Curriculum Developer/Head of Wesmont and Darien Chapter</span><br><br>Shubhra Moudgil</h2>
+            <p style="margin-right: 2%; font-size: 14px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; line-height: 1.5;">Shubhra is currently a senior in high school and is interested in majoring in banking and finance. She aspires to create additional opportunities for students in her area who share her passion for business. Her other interests include fashion and music, specifically listening to it and playing her saxophone in her school's marching band.</p>
+          </div>
+      </div>    
+    </div>
+    <div class="gallery-nav">
+      <button id="prev">&#8592;</button>
+      <button id="next">&#8594;</button>
+    </div>
+  </div>
+  <script>
+    const galleryContainer = document.querySelector('.gallery-container');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    let currentSlide = 0;
+    const slideWidth = galleryContainer.offsetWidth;
+
+    prevButton.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + galleryContainer.children.length) % galleryContainer.children.length;
+      updateGallery();
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % galleryContainer.children.length;
+      updateGallery();
+    });
+
+    function updateGallery() {
+      galleryContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    }
+  </script>
+    <div class="footerpart2">
+          <img src="cropped-image (1).png" class="footerlogoinsta">
+          <img src="tiktokicontocrop-modified.png" class="footerlogotik">
+          <button class="donate">
+              <p style="vertical-align: middle; margin: 0;">
+                  Donate
+              </p>
+          </button>
+      </div>
+</body>
+</html>
